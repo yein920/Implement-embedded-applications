@@ -1,0 +1,379 @@
+
+--회원
+INSERT INTO users(user_Id, user_Pw, user_Name, user_identification, user_PhoneNum, user_Ad)VALUES('parkbloger', '12345678', '박은지', '940117-2111111', '010-5718-6331', '서울시 마포구 신수동 63-14 거구장 지하1층 5호실 3번째 줄');
+INSERT INTO users(user_Id, user_Pw, user_Name, user_identification, user_PhoneNum, user_Ad)VALUES('handyeshuman', '34567', '손예인', '940920-2111111', '010-4215-9891', '서울시 마포구 신수동 63-14 거구장 지하1층 5호실 3번째 줄');
+INSERT INTO users(user_Id, user_Pw, user_Name, user_identification, user_PhoneNum, user_Ad)VALUES('babyshark', '0070', '임상우', '910318-1234567', '010-3006-9536', '서울시 마포구 신수동 63-14 거구장 지하1층 5호실 4번째 줄');
+INSERT INTO users(user_Id, user_Pw, user_Name, user_identification, user_PhoneNum, user_Ad)VALUES('jang', '1234', '장현아', '911101-2111111', '010-2331-2830', '서울시 마포구 신수동 63-14 거구장 지하1층 5호실 4번째 줄');
+INSERT INTO users(user_Id, user_Pw, user_Name, user_identification, user_PhoneNum, user_Ad)VALUES('teachermoon', '369369', '문상환', '801234-1111111', '010-1234-5678', '서울시 마포구 신수동 63-14 거구장 지하1층 5호실');
+
+
+
+
+--한식
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(1001, '웰빙김치찜', '한식', '서울 마포구 공덕동 256-17', 05011112222, 10000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(1002, '엄마식당', '한식', '서울 서대문구 연희동 189-4', 05022223333, 10000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(1003, '쫄면주는삼겹본능', '한식', '서울 서대문구 창천동 33-43', 05033334444, 10000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(1004, '큰맘할매순대국', '한식', '서울 마포구 노고산동 107-11', 05044445555, 10000);
+
+--중식
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(2001,'국빈', '중식', '서울특별시 마포구 신수동 39-2 신수동', 05077787603, 12000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(2002,'충화반점', '중식', '서울특별시 마포구 노고산동 31-66', 07041006221,11900);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(2003,'홍원', '중식', '서울특별시 마포구 신수동 63-14 지하1층', 05079964572,10000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(2004, '연경24시' , '중식','서울특별시 서대문구 창천동 52-157 비동', 050646490411, 10000);
+
+--일식
+INSERT INTO Restaurant (rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(3001, '스시노하나', '일식', '서울특별시 마포구 창천동 442 1층', 05075384695, 15000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(3002, '긴자료코 홍대점','일식', '서울특별시 마포구 서교동 346-21 1층', 05049202094, 12000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(3003, '이치하루', '일식','서울특별시 마포구 서교동 327-27 1층 102호', 05078870142, 7000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(3004, '고이짱 돈카츠', '일식','서울특별시 마포구 신수동 81-46', 05068049533, 8700);
+
+
+--일품
+INSERT INTO Restaurant ( rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(4001, '후라이드참잘하는집', '일품', '서울특별시 마포구 창전동 308-2', 05049331379, 10000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(4002, '7번가피자 신촌마포점', '일품', '서울특별시 서대문구 창천동 502-10 지상1층', 05077788085, 15000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(4003, '동대문 엽기떡볶이 광흥창점', '일품','서울특별시 마포구 창전동 308-1 1층 3호', 05061153335, 14000);
+INSERT INTO restaurant(rest_Reginum, rest_name, Category, rest_ad, rest_PhoneNum, minprice) VALUES(4004, '맥도날드', '일품','서울특별시 서대문구 창천동 33-12', 05067690115, 10000);
+
+
+--한식
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1101, 1001, '돼지고기김치찜', 14000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1102, 1001, '삼겹살김치찜', 14000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1103, 1001, '고등어김치찜', 14000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1104, 1001, '돼지-삼겹살김치찜',15000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1105, 1001, '공기밥', 1000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1106, 1001, '김치추가', 6000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1107, 1001, '고등어추가', 5000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1108, 1001, '사이다', 1000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1109, 1001, '콜라', 1000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1110, 1001, '물', 1000);
+
+INSERT INTO UnitRestMenu(Food_Num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1201, 1002, '생체비빔밥', 10000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1202, 1002, '소고기국밥', 10000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1203, 1002, '카레덮밥', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1204, 1002, '우엉덮밥', 10000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1205, 1002, '크래커치킨', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1206, 1002, '우엉샐러드면', 9000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1207, 1002, '과일비빔면', 10000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1208, 1002, '김치국밥', 10000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1209, 1002, '고등어국밥', 10000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1210, 1002, '닭고기국밥', 9000);
+
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1301, 1003, '구이삼겹', 14000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1302, 1003, '간장구이삼겹', 15000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1303, 1003, '대창구이삼겹', 14000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1304, 1003, '김치구이삼겹', 14500);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1305, 1003, '매운구이삼겹', 14000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1306, 1003, '구이삼겹', 14000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1307, 1003, '대창덮밥', 7000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1308, 1003, '참치마요밥', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1309, 1003, '깍두기볶음밥', 4000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1310, 1003, '음료수', 1000);
+
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1401, 1004, '순대국', 7000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1402, 1004, '뼈해장국', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1403, 1004, '얼큰버섯순대국', 9000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1404, 1004, '편육', 11000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1405, 1004, '육개장순대국', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1406, 1004, '소머리영양곰탕', 9000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1407, 1004, '영양순대국', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1408, 1004, '소고기국밥', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1409, 1004, '선지해장국', 8000);
+INSERT INTO UnitRestMenu( Food_Num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES(1410, 1004, '할매토종순대', 8000);
+
+--중식
+INSERT INTO UnitRestMenu(Food_Num, Rest_RegiNum , FoodName , UnitPrice) VALUES(2101, 2001,'짜장면',5500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2102, 2001,'짬뽕',6500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2103, 2001,'간짜장',6500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2104, 2001,'굴짬뽕',8000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2105, 2001,'홍합짬뽕',8000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2106, 2001,'짜장밥',6500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2107, 2001,'차돌짬뽕',10000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2108, 2001,'탕수육',21000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2109, 2001,'콜라1.25L',3000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2110, 2001,'사이다1.25L',3000);
+
+INSERT INTO UnitRestMenu(Food_Num,rest_Reginum,FoodName,UnitPrice) VALUES(2111, 2002,'라구짜장',8900);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2112, 2002,'충화짬뽕',8900);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2113, 2002,'중식냉면',8900);
+INSERT INTO UnitRestMenu(Food_Num,  rest_Reginum,FoodName,UnitPrice) VALUES(2114, 2002,'중화비빔밥',8900);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2115, 2002,'기스면',7900);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2116, 2002,'잡채밥',79900);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2117, 2002,'면추가', 2000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2118, 2002,'칭따오',5000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2119, 2002,'콜라',2000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2220, 2002,'사이다',2000);
+
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2221, 2003,'짜장면',5000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2222, 2003,'울면',6000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2223, 2003,'간짜장',6500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2224, 2003,'새우탕면',7500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2225, 2003,'우동', 6000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2226, 2003,'짬뽕', 6000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2227, 2003,'탕수육', 11000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2228, 2003,'잡채밥',8000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2229, 2003,'콜라',2000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2230, 2003,'사이다',2000);
+
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2231, 2004,'옛날짜장',5500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2232, 2004,'삼선간짜장',8000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2233, 2004,'유니짜장',8000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2234, 2004,'짬뽕',6500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2235, 2004,'삼선짬뽕', 8000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2236, 2004,'탕수육', 11000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2237, 2004,'찹쌀탕수육', 12000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2238, 2004,'사천탕면',8000);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2239, 2004,'코카콜라',2500);
+INSERT INTO UnitRestMenu(Food_Num, rest_Reginum,FoodName,UnitPrice) VALUES(2240, 2004,'스프라이트',2500);
+
+--일식 
+--스시노하나 
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3101, 3001, '연어초밥', 16000);
+--2
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3102,3001, '장어초밥', 17000);
+--3
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3103, 3001, '새우초밥', 14000);
+--4
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3104, 3001, '광어초밥', 18000);
+--5
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3105, 3001, '연어+광어초밥', 17000);
+--6
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3106, 3001, '돈까스', 9000);
+--7
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3107, 3001, '생선까스', 8000);
+--8
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3108, 3001, '냉모밀', 8000);
+--9
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3109, 3001, '우동', 6000);
+--10
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3110, 3001, '회덮밥', 10000);
+
+--긴자료코 홍대점
+--1
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3011, 3002, '가츠동', 8500);
+--2
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3012, 3002, '오야꼬동', 8500);
+--3
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3013, 3002, '소고기카레라이스', 8500);
+--4
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3014, 3002, '치킨카레라이스', 10000);
+--5
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3015, 3002, '새우붓카케냉우동', 11000);
+--6
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3016, 3002, '데미그라스돈까스', 10500);
+--7
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3017, 3002, '가라아게', 3000);
+--8
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3018, 3002, '왕새우후라이', 5000);
+--9
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3019, 3002, '수란', 1500);
+--10
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3020, 3002, '콜라', 2000);
+
+--이치하루&마제하루 마제소바 전문점
+--1
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3021, 3003, '마제소바라멘', 9000);
+--2
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3022, 3003, '매운마제소바라멘', 10000);
+--3
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3023, 3003, '카레마제소바라멘', 10000);
+--4
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3024, 3003, '든든마제덮밥', 8500);
+--5
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3025, 3003, '아지타마고', 1000);
+--6
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3026, 3003, '삼겹차슈추가', 2000);
+--7
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3027, 3003, '감자고로케', 4000);
+--8
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3028, 3003, '스카치에그', 4000);
+--9
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3029, 3003, '콜라', 2000);
+--10
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3030, 3003, '사이다', 2000);
+
+--고이짱 돈카츠 
+--1
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3031, 3004, '카츠카레', 9700);
+--2
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3032, 3004, '치킨카레', 9700);
+--3
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3033, 3004, '푸치카츠카레', 8700);
+--4
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3034, 3004, '돈카츠', 8700);
+--5
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3035, 3004, '매운돈카츠', 9700);
+--6
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3036, 3004, '왕돈까스', 9700);
+--7
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3037, 3004, '치킨가라아게', 3000);
+--8
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3038, 3004, '스프라이트', 1500);
+--9
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3039, 3004, '코카콜라', 1500);
+--10
+INSERT INTO UnitRestMenu(food_num,  Rest_RegiNum , FoodName , UnitPrice)
+VALUES (3040, 3004, '환타(오렌지)', 1500);
+
+--일품
+
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4101, '4001', '후라이드치킨', '14000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4102, '4001', '양념치킨', '15000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4103, '4001', '눈꽃치킨', '15000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4104, '4001', '허니버터치킨', '15000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4105, '4001', '간장치킨', '15000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4106, '4001', '후라이드반+양념반', '15000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4107, '4001', '디진다핫치킨', '17000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4108, '4001', '감자튀김', '6000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4109, '4001', '참이슬후레쉬', '3000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4110, '4001', '테라생맥주(1000cc)', '5000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4111, '4002', '슈퍼콤비네이션피자(R)', '18900');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4112, '4002', '불고기피자(R)', '18900');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4113, '4002', '페퍼로니피자(R)', '18900');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4114, '4002', '더블치즈피자(R)', '18900');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4115, '4002', '흥부포테이토피자(R)', '18900');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4116, '4002', '치즈까르보나라', '7900');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4117, '4002', '오븐스파게티', '6500');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4118, '4002', '핫윙(4PCS)', '3500');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4119, '4002', '갈릭디핑소스', '500');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4120, '4002', '콜라(1.25L)', '2000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4121, '4003', '엽기떡볶이', '14000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4122, '4003', '엽기오뎅', '14000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4123, '4003', '엽기반반', '14000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4124, '4003', '주먹김밥', '2000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4125, '4003', '계란찜', '2000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4126, '4003', '누룽지탕', '5000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4127, '4003', '오뎅탕', '10000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4128, '4003', '모듬튀김', '3000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4129, '4003', '순대(300g)', '3000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4130, '4003', '쿨피스(450ml)', '1000');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4131, '4004', '슈비버거라지세트', '8600');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4132, '4004', '슈슈버거라지세트', '7100');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4133, '4004', '1955버거라지세트', '8600');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4134, '4004', '빅맥라지세트', '7500');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4135, '4004', '베이컨토마토디럭스라지세트', '8400');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4136, '4004', '치즈버거라지세트', '6100');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4137, '4004', '치즈스틱2조각', '2700');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4138, '4004', '맥너겟4조각', '2400');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4139, '4004', '상하이치킨스낵랩', '2700');
+INSERT INTO UnitRestMenu(food_num, Rest_RegiNum , FoodName , UnitPrice)
+VALUES (4140, '4004', '오레오맥플러리', '3200');
+
+commit;

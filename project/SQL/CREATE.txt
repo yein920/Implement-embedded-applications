@@ -1,0 +1,82 @@
+DROP TABLE UNITRESTMENU CASCADE CONSTRAINTS;
+DROP TABLE RESTAURANT CASCADE CONSTRAINTS;
+DROP TABLE ORDERS CASCADE CONSTRAINTS;
+DROP TABLE USERS CASCADE CONSTRAINTS;
+DROP TABLE ORDERSDETAIL CASCADE CONSTRAINTS;
+
+CREATE TABLE RESTAURANT
+(
+    Rest_RegiNum     NUMBER           NOT NULL, 
+    Rest_Name        VARCHAR2(100)    NULL, 
+    Category         VARCHAR2(20)     NULL, 
+    Rest_Ad          VARCHAR2(120)    NULL, 
+    Rest_PhoneNum    VARCHAR2(100)    NULL, 
+    MinPrice         NUMBER           NULL, 
+    CONSTRAINT RESTAURANT_PK PRIMARY KEY (Rest_RegiNum)
+);
+
+
+CREATE TABLE USERS
+(
+    user_id                VARCHAR2(20)     NOT NULL, 
+    user_pw                VARCHAR2(20)     NULL, 
+    user_name              VARCHAR2(20)     NULL, 
+    user_identification    VARCHAR2(20)     NULL, 
+    user_PhoneNum          VARCHAR2(20)     NULL, 
+    user_ad                VARCHAR2(100)    NULL, 
+    CONSTRAINT USERS_PK PRIMARY KEY (user_id)
+);
+
+CREATE TABLE UNITRESTMENU
+(
+    food_num        NUMBER          NOT NULL, 
+    rest_reginum    NUMBER          NULL, 
+    foodname       VARCHAR2(50)    NULL, 
+    unitprice      NUMBER          NULL, 
+    CONSTRAINT UNITRESTMENU_PK PRIMARY KEY (food_num, rest_reginum)
+);
+
+
+ALTER TABLE UNITRESTMENU
+    ADD CONSTRAINT FK_UNITRESTMENU_rest_reginum_R FOREIGN KEY (rest_reginum)
+        REFERENCES RESTAURANT (Rest_RegiNum);
+
+CREATE TABLE ORDERS
+(
+    order_num            NUMBER          NOT NULL, 
+    user_id              VARCHAR2(20)    NULL, 
+    rest_reginum         NUMBER          NULL, 
+    Order_TotalAmount    NUMBER          NULL, 
+    CONSTRAINT ORDERS_PK PRIMARY KEY (order_num)
+);
+
+
+ALTER TABLE ORDERS
+    ADD CONSTRAINT FK_ORDERS_rest_reginum_RESTAUR FOREIGN KEY (rest_reginum)
+        REFERENCES RESTAURANT (Rest_RegiNum);
+
+
+ALTER TABLE ORDERS
+    ADD CONSTRAINT FK_ORDERS_user_id_USERS_user_i FOREIGN KEY (user_id)
+        REFERENCES USERS (user_id);
+
+CREATE TABLE ORDERSDETAIL
+(
+    order_num     NUMBER      NOT NULL, 
+    food_num      NUMBER          NOT NULL, 
+    order_food    VARCHAR2(20)    NULL 
+--    CONSTRAINT ORDERSDETAIL_PK PRIMARY KEY (order_num, food_num)
+);
+
+
+ALTER TABLE ORDERSDETAIL
+    ADD CONSTRAINT FK_ORDERSDETAIL_order_num_ORDE FOREIGN KEY (order_num)
+      REFERENCES ORDERS (order_num);
+
+ALTER TABLE UNITRESTMENU
+         ADD CONSTRAINT UNITRESTMENU_food_num_UNIQUE UNIQUE(food_num);
+
+--臾몄젣!!
+ALTER TABLE ORDERSDETAIL
+    ADD CONSTRAINT FK_ORDERSDETAIL_food_num_UNFK FOREIGN KEY (food_num)
+        REFERENCES UNITRESTMENU (food_num);
